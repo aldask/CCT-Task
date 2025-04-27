@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>F1 Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <h1 class="calculator__title">F1 Season Points Calculator</h1>
+      <p class="calculator__description">
+        Enter the driver's finishing position for each race (1-10 for points,
+        leave empty or use >10 for 0 points).
+      </p>
+
+      <form id="points-form" class="calculator__form">
+        <div class="calculator__races">
+          <div class="calculator__race">
+            <label for="race-1" class="calculator__label">Race 1</label>
+            <input
+              type="number"
+              id="race-1"
+              class="calculator__input"
+              placeholder="Value"
+              min="1"
+            />
+          </div>
+
+          <div class="calculator__race">
+            <label for="race-2" class="calculator__label">Race 2</label>
+            <input
+              type="number"
+              id="race-2"
+              class="calculator__input"
+              placeholder="Value"
+              min="1"
+            />
+          </div>
+
+          <div class="calculator__race">
+            <label for="race-3" class="calculator__label">Race 3</label>
+            <input
+              type="number"
+              id="race-3"
+              class="calculator__input"
+              placeholder="Value"
+              min="1"
+            />
+          </div>
+
+          <div class="calculator__race">
+            <label for="race-4" class="calculator__label">Race 4</label>
+            <input
+              type="number"
+              id="race-4"
+              class="calculator__input"
+              placeholder="Value"
+              min="1"
+            />
+          </div>
+
+          <div class="calculator__race">
+            <label for="race-5" class="calculator__label">Race 5</label>
+            <input
+              type="number"
+              id="race-5"
+              class="calculator__input"
+              placeholder="Value"
+              min="1"
+            />
+          </div>
+        </div>
+
+        <button type="submit" class="calculator__submit">Submit</button>
+      </form>
+
+      <div id="result" class="calculator__result"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
