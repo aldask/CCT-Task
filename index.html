@@ -8,71 +8,71 @@
   </head>
   <body>
     <div class="calculator">
-      <h1 class="calculator__title">F1 Season Points Calculator</h1>
-      <p class="calculator__description">
-        Enter the driver's finishing position for each race (1-10 for points,
-        leave empty or use >10 for 0 points).
-      </p>
+      <div class="calculator__header">
+        <h2 class="calculator__header-title">F1 Season Points Calculator</h2>
+        <p class="calculator__header-description">
+          Enter the driver's finishing position for each race (1-10 for points,
+          leave empty or use >10 for 0 points).
+        </p>
+      </div>
 
       <form id="points-form" class="calculator__form">
-        <div class="calculator__races">
           <div class="calculator__race">
-            <label for="race-1" class="calculator__label">Race 1</label>
+            <label for="race-1" class="calculator__race-label">Race 1</label>
             <input
               type="number"
               id="race-1"
-              class="calculator__input"
+              class="calculator__race-input"
               placeholder="Value"
               min="1"
             />
           </div>
 
           <div class="calculator__race">
-            <label for="race-2" class="calculator__label">Race 2</label>
+            <label for="race-2" class="calculator__race-label">Race 2</label>
             <input
               type="number"
               id="race-2"
-              class="calculator__input"
+              class="calculator__race-input"
               placeholder="Value"
               min="1"
             />
           </div>
 
           <div class="calculator__race">
-            <label for="race-3" class="calculator__label">Race 3</label>
+            <label for="race-3" class="calculator__race-label">Race 3</label>
             <input
               type="number"
               id="race-3"
-              class="calculator__input"
+              class="calculator__race-input"
               placeholder="Value"
               min="1"
             />
           </div>
 
           <div class="calculator__race">
-            <label for="race-4" class="calculator__label">Race 4</label>
+            <label for="race-4" class="calculator__race-label">Race 4</label>
             <input
               type="number"
               id="race-4"
-              class="calculator__input"
+              class="calculator__race-input"
               placeholder="Value"
               min="1"
             />
           </div>
 
           <div class="calculator__race">
-            <label for="race-5" class="calculator__label">Race 5</label>
+            <label for="race-5" class="calculator__race-label">Race 5</label>
             <input
               type="number"
               id="race-5"
-              class="calculator__input"
+              class="calculator__race-input"
               placeholder="Value"
               min="1"
             />
-          </div>
         </div>
 
-        <button type="submit" class="calculator__submit">Submit</button>
+        <button type="submit" class="calculator__form-submit">Submit</button>
       </form>
 
       <div id="result" class="calculator__result"></div>

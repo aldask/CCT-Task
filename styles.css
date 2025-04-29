@@ -1,6 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  /* Font */
+  --font-primary: "Inter", sans-serif;
+
+  --font-default-size: 16px;
+  --font-title-size: 24px;
+
+  --font-bold-weight: 600;
+  --font-normal-weight: 400;
+
+  /* Colors */
+  --black-primary: #2c2c2c;
+  --black-secondary: #1e1e1e;
+
+  --grey-primary: #d9d9d9;
+  --grey-secondary: #b3b3b3;
+
+  --white-primary: #ffffff;
+  --white-secondary: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  padding: 20px;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0;
+}
+
+h2 {
+  height: 58px;
+  max-width: 394px;
+  line-height: 120%;
+  font-weight: var(--font-bold-weight);
+  font-size: var(--font-title-size);
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-size: var(--font-default-size);
+  font-weight: var(--font-normal-weight);
+  line-height: 140%;
+  display: flex;
+}
+
 .calculator {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.calculator__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  max-width: 392px;
+}
+
+.calculator__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 320px;
+  border: 1px solid var(--grey-primary);
+  border-radius: 8px;
+  padding: 24px;
+  gap: 24px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.calculator__race {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.calculator__race-label {
+  font-size: var(--font-default-size);
+  color: var(--black-secondary);
+  font-weight: var(--font-bold-weight);
+  line-height: 140%;
+}
+
+.calculator__race-input {
+  min-width: 240px;
+  border-radius: 8px;
+  border: 1px solid var(--grey-primary);
+  padding: 12px 16px;
+  background-color: var(--white-primary);
+}
+
+.calculator__race-input::placeholder {
+  color: var(--grey-secondary);
+  font-weight: var(--font-normal-weight);
+  font-size: var(--font-default-size);
+  line-height: 100%;
+}
+
+.calculator__form-submit {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--black-primary);
+  padding: 12px;
+  gap: 8px;
+  background-color: var(--black-primary);
+  cursor: pointer;
+
+  font-weight: var(--font-default-weight);
+  font-size: var(--font-default-size);
+  line-height: 100%;
+  color: var(--white-secondary);
 }
