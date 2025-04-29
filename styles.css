@@ -158,3 +158,10 @@ p {
 .visible {
   display: block;
 }
+
+.calculator__error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 4px;
+  display: none;
+}
