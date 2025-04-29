@@ -38,4 +38,5 @@ form.addEventListener("submit", function (event) {
   });
 
   resultDiv.textContent = `Total Points: ${totalPoints}`; // Displaying the total points in the result div
+  resultDiv.style.display = "block";
 });
