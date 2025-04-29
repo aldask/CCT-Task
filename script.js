@@ -25,18 +25,29 @@ form.addEventListener("submit", function (event) {
   event.preventDefault(); // Prevents the default form submission behavior (page reload)
 
   let totalPoints = 0; // Initializing point counter
+  let formIsOk = true;
 
   raceIds.forEach((id) => {
     // Looping through each race id
     const input = document.getElementById(id); // Grabbing the input box by id
+    const errorMsg = document.getElementById(`error-${id}`); // Grabbing the error message element by id
     const position = parseInt(input.value); // Getting the value of the input box and parsing it to an integer
 
-    if (!isNaN(position)) {
-      // Continue only if the input is a valid number (not empty or invalid)
+    if (!isNaN(position) && position > 0 && input.value === String(position)) {
+      // Continue only if the input is a valid number (without leading zeros - technically in my opinion it's not an issue if the user writes 01 but for clarity I removed this option) and greater than 0
       totalPoints += pointsTable[position] || 0; // Add the corresponding points from the table or add 0 if the position is 11 or higher
+      errorMsg.style.display = "none"; // Hide the error message if the input is valid
+      console.log(position);
+    } else {
+      errorMsg.style.display = "block"; // Show the error message if the input is invalid
+      formIsOk = false; // Set the form status to not ok
     }
   });
 
-  resultDiv.style.display = "block"; // Show the result
-  resultDiv.textContent = `Total Points: ${totalPoints}`; // Displaying the total points in the result div
+  if (formIsOk) {
+    resultDiv.textContent = `Total Points: ${totalPoints}`; // Displaying the total points in the result div
+    resultDiv.style.display = "block"; // Show the result
+  } else {
+    resultDiv.style.display = "none"; // Hide the result if the form is not ok
+  }
 });
