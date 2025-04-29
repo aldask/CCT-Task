@@ -47,6 +47,7 @@ form.addEventListener("submit", function (event) {
   if (formIsOk) {
     resultDiv.textContent = `Total Points: ${totalPoints}`; // Displaying the total points in the result div
     resultDiv.style.display = "block"; // Show the result
+    window.scrollTo(0, document.body.scrollHeight); // Auto scroll to the bottom of the page if need to for see the result
   } else {
     resultDiv.style.display = "none"; // Hide the result if the form is not ok
   }
