@@ -102,6 +102,7 @@ p {
 .calculator__race-input {
   min-width: 240px;
   border-radius: 8px;
+  font-size: var(--font-default-size);
   border: 1px solid var(--grey-primary);
   padding: 12px 16px;
   background-color: var(--white-primary);
