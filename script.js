@@ -31,17 +31,16 @@ form.addEventListener("submit", function (event) {
     // Looping through each race id
     const input = document.getElementById(id); // Grabbing the input box by id
     const errorMsg = document.getElementById(`error-${id}`); // Grabbing the error message element by id
-    const rawValue = input.value.trim(); // Trimming the input value to clean up whitespace
 
-    if (rawValue === "") {
-      // Allow empty inputs (treated as 11th or worse — 0 points)
+    if (input.value === "") {
+      // Allowing empty input
       errorMsg.style.display = "none"; // No error for empty input
       return;
     }
 
-    const position = parseInt(rawValue); // Getting the value of the input box and parsing it to an integer
+    const position = parseInt(input.value); // Getting the value of the input box and parsing it to an integer
 
-    if (!isNaN(position) && position > 0 && rawValue === String(position)) {
+    if (!isNaN(position) && position > 0 && input.value === String(position)) {
       // Continue only if the input is a valid number (without leading zeros - technically in my opinion it's not an issue if the user writes 01 but for clarity I removed this option) and greater than 0
       totalPoints += pointsTable[position] || 0; // Add the corresponding points from the table or add 0 if the position is 11 or higher
       errorMsg.style.display = "none"; // Hide the error message if the input is valid
