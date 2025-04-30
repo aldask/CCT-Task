@@ -37,7 +37,6 @@ form.addEventListener("submit", function (event) {
       // Continue only if the input is a valid number (without leading zeros - technically in my opinion it's not an issue if the user writes 01 but for clarity I removed this option) and greater than 0
       totalPoints += pointsTable[position] || 0; // Add the corresponding points from the table or add 0 if the position is 11 or higher
       errorMsg.style.display = "none"; // Hide the error message if the input is valid
-      console.log(position);
     } else {
       errorMsg.style.display = "block"; // Show the error message if the input is invalid
       formIsOk = false; // Set the form status to not ok
