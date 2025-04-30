@@ -156,10 +156,6 @@ p {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.visible {
-  display: block;
-}
-
 .calculator__error-message {
   color: red;
   font-size: 14px;
